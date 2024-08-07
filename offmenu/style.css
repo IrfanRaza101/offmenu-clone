@@ -263,7 +263,6 @@ body {
   bottom: 20px;
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -284,12 +283,13 @@ body {
   cursor: pointer;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #666;
+  font-weight: 600;
   transition: color 0.3s, background-color 0.3s;
 }
 
 
 .navbar .one, .two, .three {
+  color: #666;
   border-right: 1px solid rgb(163, 163, 163);
 }
 
@@ -297,7 +297,6 @@ body {
 .nav-item:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 25px;
 }
 
 .book-intro {
@@ -313,7 +312,7 @@ body {
 .popup-nav {
   position: relative;
   bottom: 1.3px;
-  left: 47.9px;
+  left: 43px;
   width: 5px;
   height: 5px;
   background-color: rgb(0, 161, 22);

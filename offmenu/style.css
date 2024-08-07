@@ -18,6 +18,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   overflow-y: auto;
@@ -235,6 +237,7 @@ body {
   height: 100%;
   margin-top: -100px;
 }
+/* <!-- video section --> */
 
 .video-section {
   display: flex;
@@ -249,6 +252,95 @@ body {
   margin-top: 50px;
 }
 
+/* <!-- navbar section --> */
+
+.navbar-section{
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  z-index: 10;
+  position: sticky;
+  bottom: 20px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto 0 auto;
+  background: rgb(255, 255, 255); 
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+
+.navbar .one, .two, .three {
+  border-right: 1px solid rgb(163, 163, 163);
+}
+
+
+.nav-item:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+}
+
+.book-intro {
+  color: rgb(0, 0, 0);
+}
+
+.book-intro::before {
+  content: '•';
+  color: green;
+  margin-right: 5px;
+}
+
+.popup-nav {
+  position: relative;
+  bottom: 1.3px;
+  left: 47.9px;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(0, 161, 22);
+  border-radius: 50%;
+  animation-name: popup-nav;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes popup-nav {
+  0% {
+    scale: 1;
+    opacity: 100%;
+  }
+
+  40% {
+    opacity: 50%;
+  }
+
+  100% {
+    scale: 2.5;
+    opacity: 0%;
+  }
+}
+
+/* <!-- text section --> */
 .text-box{
   width: 100%;
   max-width: 800px;

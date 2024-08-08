@@ -661,14 +661,29 @@ body {
   right: 300px;
 }
 
-#sec-img, #sec-img2, .sec-logo, #sec-img1, #sec-img3, #sec-img4 {
+#sec-img, .sec-logo, #sec-img1, #sec-img3, #sec-img4 {
   animation: fade-ins linear;
   animation-timeline: view( -500px)}
 
   @keyframes fade-ins {
   0% {
     
-    transform: rotate(0.10turn);
+    transform: rotate(0.08turn);
+   }
+  100% {
+    
+    transform: rotate(-0.08turn);
+  }
+}
+
+#sec-img2{
+  animation: fade-ines linear;
+  animation-timeline: view( -500px)}
+
+  @keyframes fade-ines {
+  0% {
+    
+    transform: rotate(0.08turn);
    }
   100% {
     

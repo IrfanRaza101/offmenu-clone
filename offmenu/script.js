@@ -26,3 +26,26 @@ prevBtn.addEventListener('click', () => {
 
 // Initialize the carousel by showing the first testimonial
 showTestimonial(currentIndex);
+
+
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        // Close all other answers
+        document.querySelectorAll('.faq-question').forEach(otherButton => {
+            if (otherButton !== button && otherButton.classList.contains('active')) {
+                otherButton.classList.remove('active');
+                otherButton.nextElementSibling.style.maxHeight = 0;
+            }
+        });
+
+        // Toggle the clicked answer
+        const faqAnswer = button.nextElementSibling;
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+        } else {
+            faqAnswer.style.maxHeight = 0;
+        }
+    });
+});
